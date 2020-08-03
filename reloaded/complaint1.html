@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MP POLICE CITIZEN PORTAL</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/resstyle.css">
+  <link rel="stylesheet" href="css/form4.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="pull-left visible-md visible-lg">
+            <div id="logo-img"></div>
+          </a>
+
+          <div class="navbar-brand">
+            <a href="user.html">
+              <h1>MP POLICE CITIZEN PORTAL</h1>
+            </a>
+            <p>
+              <img src="images/star-k-logo.png" alt="Kosher certification">
+              <span style="color:#4287f5">Desh Bhakti Jan Seva</span>
+            </p>
+          </div>
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li class="visible-xs active">
+              <a href="user.html">
+                <span class="glyphicon glyphicon-home"></span> Home</a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="	glyphicon glyphicon-question-sign"></span><br class="hidden-xs"> Help</a>
+            </li>
+            <li id="phone" class="hidden-xs">
+              <a href="tel:410-602-5008">
+                <span>+91 911-888-4444</span></a>
+              <div>*Helpline Number</div>
+            </li>
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+
+  <div class="navbar" id="hulu">
+
+    <a href="user.html" class="col-md-2 col-sm-4 col-xs-12">
+      <div>Home page</div>
+    </a>
+    <a href="lost_vehicle.html" class="col-md-2 col-sm-4 col-xs-12">
+      <div>Stolen Vehicle</div>
+    </a>
+
+
+
+
+    <a href="lost_property.html" class="col-md-2 col-sm-4 col-xs-12">
+
+      <div>Lost Property</div>
+    </a>
+
+  </div>
+
+  <div id="call-btn" class="visible-xs">
+    <a class="btn" href="tel:+91 911-888-4444">
+      <span class="glyphicon glyphicon-phone"></span>
+      +91 911-888-4444
+    </a>
+  </div>
+  <div id="xs-deliver" class="text-center visible-xs">*Helpline Number</div>
+
+
+
+
+
+
+
+
+
+  <!-- Complain FORM-->
+
+  <div class="wrapper" id="comp-form">
+    <div class="title">
+      <u>New Complaint Form</u>
+    </div>
+    <div class="form">
+      <div class="inputfield">
+        <label>First Name</label>
+        <input type="text" class="input" id="first" required>
+      </div>
+      <div class="inputfield">
+        <label>Last Name</label>
+        <input type="text" class="input" id="last" required>
+      </div>
+
+      <div class="inputfield">
+        <label>Phone Number</label>
+        <input type="text" class="input" id="mob" maxlength="10" required>
+      </div>
+
+      <div class="inputfield">
+        <label>Relation Type</label>
+        <div class="custom_select">
+          <select id="relation">
+            <option value="">Select</option>
+            <option value="male">Father</option>
+            <option value="female">Mother</option>
+            <option value="husband">Husband</option>
+            <option value="wife">wife</option>
+            <option value="Guardian">Guardian</option>
+
+          </select>
+        </div>
+      </div>
+
+
+      <div class="inputfield">
+        <label>State</label>
+        <input type="text" class="input" id="state">
+      </div>
+      <div class="inputfield">
+        <label>Gender</label>
+        <div class="custom_select">
+          <select id="gender">
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="">Transgender</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="inputfield">
+        <label>District</label>
+        <div class="custom_select">
+          <select id="dist">
+            <option disabled="displayed" selected="selected">---Choose District--- </option>
+
+            <option>Bhopal district</option>
+            <option>Raisen district</option>
+            <option>Rajgarh district</option>
+            <option>Sehore district</option>
+            <option>Vidisha district</option>
+            <option>Morena district</option>
+          </select>
+        </div>
+      </div>
+
+
+
+      <div class="inputfield">
+        <label>Address</label>
+        <textarea class="textarea" id="address" required></textarea>
+      </div>
+      <div class="inputfield">
+        <label>Aadhar Number</label>
+        <input type="text" class="input" id="aadhar" required>
+      </div>
+
+
+      <div class="inputfield">
+        <label>Upload Affidavit</label>
+        <input type="file" class="input" id="store4" name="Affidavit" required="required">
+      </div>
+      <div class="inputfield">
+        <label>Upload Crime scene Evidence</label>
+        <input type="file" class="input" id="store1" name="picture">
+      </div>
+
+      <div class="inputfield">
+        <label>Upload Signature</label>
+        <input type="file" class="input" id="store2" name="signature" required="required">
+      </div>
+
+      <div class="inputfield">
+        <label>Upload Medical Evidence</label>
+        <input type="file" class="input" id="store3" name="Medical" required="required">
+      </div>
+
+      <div class="inputfield">
+        <label>Your Complaint Details</label>
+        <textarea class="textarea" id="complain" required></textarea>
+      </div>
+
+
+      <div class="text-right" style="padding-top:15px">
+        <button type="button" class="btn btn-success" id="enter" style="margin-right:5px;"> SUBMIT </button>
+        <a href="user.html"><button type="button" class="btn btn-danger" style="background:none;color:red;border:1px solid red"> Cancel </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>HELPLINE No:</span><br>
+          Women Helpline: 1090<br>
+          Children Helpline0 :1120<br>
+          Senior Citizen helpline: 1091
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          <p>Home Department
+            Government of Madhya Pradesh 3rd Floor,
+            Vallabh Bhavan-II, Govt.of Madhya Pradesh
+            4 th Floor, Mantralaya, Vallabh Bhavan-I
+            Bhopal, Madhya Pradesh pincode– 462004
+            Fax Number – 0755-2441684
+          </p>
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+          <span> Mail us at:</span>
+          <p>cpma.cctns-scrb@mppolice.gov.in</p>
+
+          <span>Contact:</span>
+          <p>0120-2494564</p>
+          <p>+91 97131xxxxx</p>
+        </section>
+      </div>
+      <div class="text-center"> Copyright © 2020. Government of Madhya Pradesh, India. All Rights Reserved</div>
+    </div>
+  </footer>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <!-- <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script> -->
+
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-functions.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCUihnz_5IpZf1ebfn9qKKnQhGVB9fkInQ",
+      authDomain: "sih2020-880e9.firebaseapp.com",
+      databaseURL: "https://sih2020-880e9.firebaseio.com",
+      projectId: "sih2020-880e9",
+      storageBucket: "sih2020-880e9.appspot.com",
+      messagingSenderId: "459850698683",
+      appId: "1:459850698683:web:32179ec1b5277b32c43e9e",
+      measurementId: "G-0WF97D07E4"
+    };
+    firebase.initializeApp(config);
+    firebase.analytics();
+
+
+
+    //<!--victim photo-->
+
+    var uploader = document.getElementById('upload');
+    var fileButton = document.getElementById("store1");
+
+    var s = firebase.storage();
+
+
+
+    fileButton.addEventListener('change', function(e) {
+
+
+      var file = e.target.files[0];
+
+
+      var storageRef = s.ref('crimesceneEvidence/' + file.name);
+
+
+      storageRef.put(file);
+
+
+    });
+
+
+
+    // <!--Signaturephoto-->
+
+    var uploader1 = document.getElementById('upload1');
+    var fileButton1 = document.getElementById("store2");
+
+
+
+    fileButton1.addEventListener('change', function(e) {
+
+
+      var file1 = e.target.files[0];
+
+
+      var storageRef = s.ref('signature/' + file1.name);
+
+
+      storageRef.put(file1);
+
+
+    });
+
+    //Upload MEDICAL
+    var uploader2 = document.getElementById('upload2');
+    var fileButton3 = document.getElementById("store3");
+
+
+
+    fileButton1.addEventListener('change', function(e) {
+
+
+      var file1 = e.target.files[0];
+
+
+      var storageRef = s.ref('MedicalEvidence/' + file1.name);
+
+
+      storageRef.put(file1);
+
+
+    });
+
+//UPLOAD AFFIDAVIT
+
+    var uploader2 = document.getElementById('upload2');
+    var fileButton4 = document.getElementById("store4");
+
+
+
+    fileButton1.addEventListener('change', function(e) {
+
+
+      var file1 = e.target.files[0];
+
+
+      var storageRef = s.ref('AFFIDAVIT/' + file1.name);
+
+
+      storageRef.put(file1);
+
+
+    });
+
+
+
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    // db.settings({
+    // timestampsInSnapshots: true
+    // });
+  </script>
+  <script>
+  
+
+    const btn = document.getElementById('enter')
+
+    btn.addEventListener('click', () => {
+
+      const rec = document.getElementById('mob').value
+
+      // const text = document.getElementById('message').value
+      const name1 = document.getElementById('first').value
+      const name2 = document.getElementById('last').value
+      const name = name1 + ' ' + name2;
+
+      fetch("https://allahmeetsram.herokuapp.com/sms", {
+        method: 'post',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          body: 'Your FIR has been sucessfully launch' + ' ' + name,
+          from: '+12672143344',
+          to: '+91' + rec
+        })
+      }).then(function(response) {
+        return response.json()
+      }).then(data => console.log(data))
+    });
+  </script>
+
+
+<script src="js/complain.js" charset="utf-8"></script>
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- <script src="js/script.js"></script> -->
+
+</body>
+
+</html>

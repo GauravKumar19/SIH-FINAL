@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MP POLICE CITIZEN PORTAL</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/resstyle.css">
+  <link rel="stylesheet" href="css/form4.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index2.html" class="pull-left visible-md visible-lg">
+            <div id="logo-img"></div>
+          </a>
+
+          <div class="navbar-brand">
+            <a href="index2.html">
+              <h1>MP POLICE CITIZEN PORTAL</h1>
+            </a>
+            <p>
+              <img src="images/star-k-logo.png" alt="Kosher certification">
+              <span style="color:#4287f5">देश भक्ति जन सेव</span>
+            </p>
+          </div>
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+       <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li class="visible-xs active">
+              <a href="admin2.html">
+                <span class="glyphicon glyphicon-home"></span> मुख्य पृष्ठ</a>
+            </li>
+
+
+<!--
+            <li>
+              <a>
+                <span class="glyphicon glyphicon-log-out" id="logout"></span><br class="hidden-xs"> लॉग आउट</a>
+            </li>
+-->
+
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> बारे में</a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class="	glyphicon glyphicon-question-sign"></span><br class="hidden-xs"> मदद</a>
+            </li>
+            <li id="phone" class="hidden-xs">
+              <a href="tel:410-602-5008">
+                <span>+91 911-888-4444</span></a>
+              <div>*हेल्पलाइन नंबर</div>
+            </li>
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+
+
+  <div class="navbar" id="hulu">
+
+    <a href="user2.html" class="col-md-2 col-sm-4 col-xs-12">
+      <div>मुख्य पृष्ठ</div>
+    </a>
+    <a href="lost_property2.html" class="col-md-2 col-sm-4 col-xs-12">
+      <div>खोई संपत्</div>
+    </a>
+    <a href="complaint2.html" class="col-md-2 col-sm-4 col-xs-12">
+
+      <div>लॉज एफ.आई.आर</div>
+    </a>
+
+  </div>
+
+
+  <div id="call-btn" class="visible-xs">
+    <a class="btn" href="tel:+91 911-888-4444">
+      <span class="glyphicon glyphicon-phone"></span>
+      +91 911-888-4444
+    </a>
+  </div>
+  <div id="xs-deliver" class="text-center visible-xs">*हेल्पलाइन नंबर</div>
+
+
+
+  <!-- REGSTRATION FORM-->
+
+  <div class="wrapper">
+    <div class="title">
+
+चोरी के वाहन की रिपोर्ट
+    </div>
+   <div class="form">
+      <div class="inputfield">
+        <label>पहला नाम</label>
+        <input type="text" class="input" id="first">
+      </div>
+      <div class="inputfield">
+        <label>अंतिम नाम</label>
+        <input type="text" class="input" id="last">
+      </div>
+
+      <div class="inputfield">
+        <label>फ़ोन नंबर</label>
+        <input type="text" class="input" id="mob" maxlength="10">
+      </div>
+
+      <div class="inputfield">
+        <label>ई-मेल एड्रेस</label>
+        <input type="email" class="input" id="email">
+      </div>
+
+      <div class="inputfield">
+        <label>जहां से वाहन चोरी हुआ था</label>
+        <input type="text" class="input" id="where">
+      </div>
+      <div class="inputfield">
+        <label>
+जिस दिन वाहन गुम हो गया था</label>
+        <input type="date" class="input" id="date" placeholder="dd/mm/yyyy">
+      </div>
+      <div class="inputfield">
+        <label>
+जिस समय वाहन गुम हो गया था</label>
+        <input type="time" class="input" id="time" placeholder="">
+      </div>
+
+
+
+      <div class="inputfield">
+        <label>चुराए गए वाहन का विस्तृत विवरण</label>
+        <textarea class="textarea" id="desc"></textarea>
+      </div>
+
+      <div class="inputfield">
+        <label>घटना का विवरण</label>
+        <textarea class="textarea" id="breif"></textarea>
+      </div>
+      <!--
+        <div class="inputfield">
+            <label>Aadhar Number</label>
+            <input type="text" class="input" id="aadhar">
+         </div>
+-->
+      <div class="text-right" style="padding-top:15px">
+        <button type="button" class="btn btn-success" id="enter" style="margin-right:5px;"> रिपोर्ट </button>
+        <a href="user2.html"><button type="button" class="btn btn-danger" style="background:none;color:red;border:1px solid red"> रद्द करें </button>
+      </div>
+    </div>
+  </div>
+
+    <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>हेल्पलाइन नंबर:</span><br>
+          महिला हेल्पलाइन: 1090<br>
+          चाइल्ड हेल्पलाइन :1120<br>
+          वरिष्ठ नागरिक हेल्पलाइन: 1091
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>पता:</span><br>
+        <p>मध्य प्रदेश की गृह विभाग सरकार तीसरा तल,
+        वल्लभ भवन-II, मध्य प्रदेश सरकार
+        चौथी मंजिल, मंत्रालय, वल्लभ भवन-I
+         भोपाल, मध्य प्रदेश पिनकोड– 462004
+        फैक्स नंबर – 0755-2441684
+          </p>
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+        <span> हमें मेल करें:</span>
+        <p>cpma.cctns-scrb@mppolice.gov.in</p>
+
+          <span>संपर्क करें:</span>
+          <p>0120-2494564</p>
+          <p>+91 97131xxxxx</p>
+        </section>
+        </div>
+        <div class="text-center"> Copyright © 2020. Government of Madhya Pradesh, India. All Rights Reserved</div>
+        </div>
+  </footer>
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-functions.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCUihnz_5IpZf1ebfn9qKKnQhGVB9fkInQ",
+      authDomain: "sih2020-880e9.firebaseapp.com",
+      databaseURL: "https://sih2020-880e9.firebaseio.com",
+      projectId: "sih2020-880e9",
+      storageBucket: "sih2020-880e9.appspot.com",
+      messagingSenderId: "459850698683",
+      appId: "1:459850698683:web:32179ec1b5277b32c43e9e",
+      measurementId: "G-0WF97D07E4"
+    };
+    firebase.initializeApp(config);
+    firebase.analytics();
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    // db.settings({
+    // timestampsInSnapshots: true
+    // });
+  </script>
+  <script src="js/stolen1.js" charset="utf-8"></script>
+
+  <script>
+    //     const btn = document.getElementById('inp')
+    //
+    //     btn.addEventListener('click', () => {
+    //
+    //       const rec = document.getElementById('mob').value
+    //       console.log(rec)
+    //       // const text = document.getElementById('message').value
+    //       const name1 = document.getElementById('first').value
+    //       const name2 = document.getElementById('last').value
+    // 			const name= name1 + ' ' + name2;
+    //
+    //       fetch("https://allahmeetsram.herokuapp.com/sms", {
+    //         method: 'post',
+    //         headers: {
+    //           'Accept': 'application/json',
+    //           'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify({
+    //           body: 'Your registration is complete' + ' ' +  name,
+    //           from: '+12672143344',
+    //           to: '+91' + rec
+    //         })
+    //       }).then(function(response) {
+    //         return response.json()
+    //       }).then(data => console.log(data))
+    // });
+  </script>
+
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- <script src="js/script.js"></script> -->
+
+</body>
+
+</html>

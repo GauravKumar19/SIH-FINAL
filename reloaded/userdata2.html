@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C C T N S</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/cctns.css">
+  <!-- <link rel="stylesheet" href="css/form4.css"> -->
+
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+  <SCRIPT type="text/javascript">
+    window.history.forward();
+
+    function noBack() {
+      window.history.forward();
+    }
+  </SCRIPT>
+
+
+
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      align-content: center;
+    }
+
+    th,
+    td {
+      padding: 5px;
+      text-align: left;
+      color: black;
+    }
+
+    input#store1 {
+      display: inline-block;
+      float: left;
+      padding-top: 47px;
+      height: 42px;
+      width: 93px;
+      outline: none;
+      overflow: hidden;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png') center center no-repeat #e4e4e4;
+      border-radius: 20px;
+      background-size: 60px 60px;
+    }
+  </style>
+</head>
+
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="admin2.html" class="pull-left visible-md visible-lg">
+            <div id="logo-img"></div>
+          </a>
+
+          <div class="navbar-brand">
+            <a href="admin2.html">
+              <h1>C C T N S</h1>
+            </a>
+            <!-- <p>
+              <img src="images/star-k-logo.png" alt="Kosher certification">
+              <span style="color:#4287f5">Desh Bhakti Jan Seva</span>
+            </p> -->
+          </div>
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li class="visible-xs active">
+              <a href="admin2.html">
+                <span class="glyphicon glyphicon-home"></span> मुख्य पृष्ठ</a>
+            </li>
+
+
+            <li>
+              <a>
+                <span class="glyphicon glyphicon-log-out" id="logout"></span><br class="hidden-xs">लॉग आउट</a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> बारे में</a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class="	glyphicon glyphicon-question-sign"></span><br class="hidden-xs"> मदद</a>
+            </li>
+            <li id="phone" class="hidden-xs">
+              <a href="tel:410-602-5008">
+                <span>+91 911-888-4444</span></a>
+              <div>*हेल्पलाइन नंबर</div>
+            </li>
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+
+  <div class="navbar" id="hulu">
+
+    <a href="admin2.html" class="col-md-2 col-sm-4 col-xs-12">
+      <div>मुख्य पृष्ठ</div>
+    </a>
+
+    <!--
+            <a href="#" class="col-md-2 col-sm-4 col-xs-12">
+              <div>View FIR</div>
+            </a> -->
+    <!--
+    <a href="#" class="col-md-2 col-sm-4 col-xs-12">
+      <div>Lost Property</div>
+    </a>
+
+
+        <a href="#" class="col-md-2 col-sm-4 col-xs-12">
+          <div>Stolen Vehicle</div>
+        </a> -->
+
+
+
+  </div>
+  <!--USER DATA-->
+
+
+  <table style="border:2px solid black;padding:10px;margin-left:40px;">
+
+    <thead>
+      <tr>
+        <th>नाम</th>
+        <th>मोबाइल</th>
+        <th>लिंग</th>
+        <th>रिश्ता</th>
+        <th>पता</th>
+        <!-- <th>E-MAIL</th> -->
+        <th>शहर</th>
+        <th>जिला</th>
+        <th>आधार संख्या</th>
+        <th>शिकायत</th>
+        <th>अवलोकन</th>
+    <tbody id="tabledata">
+      </thead>
+    </tbody>
+    <!--
+                </tr>
+                <tr id="tr" style="border-bottom:1px solid black">
+                <td id="Name"></td>
+                <td id="Mobile"></td>
+                <td id="Gender"></td>
+                <td id="Address"></td>
+                <td id="Email"></td>
+                <td id="City"></td>
+                <td id="aadhar"></td>
+               </tr> -->
+
+  </table>
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <u>
+            <h1 class="modal-title" style="color:black">F . I . R</h1>
+          </u>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body" style="color:black">
+          <div class="col-md-12" style="padding:5px;">
+            <input type="text" style="width:100%;" id=form-name readonly />
+          </div>
+          <div class="col-md-12" style="padding:5px;">
+            <input type="number" id=form-mobile style="width:100%;" readonly />
+          </div>
+          <div class="col-md-12" style="padding:5px;">
+            <input type="text" id=form-gender style="width:100%;" readonly />
+          </div>
+          <div class="col-md-12" style="padding:5px;">
+            <input type="text" id=form-relation style="width:100%;" readonly />
+          </div>
+          <div class="col-md-12" style="padding:5px;">
+            <input type="text" id=form-address style="width:100%" readonly />
+          </div>
+          <div class="col-md-12" style="padding:5px;">
+            <input type="text" id=form-city style="width:100%;" readonly />
+          </div>
+          <div class="col-md-12" style="padding:5px;">
+            <input type="text" id=form-district style="width:100%;" readonly />
+          </div>
+          <div class="col-md-12" style="padding:5px;">
+            <input type="text" id=form-aadhar style="width:100%;" readonly />
+          </div>
+          <div class="col-md-12" style="padding:5px;">
+            <textarea id="form-complain" name="w3review" rows="4" cols="60" class="col-md-12">
+                </textarea>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer" style="color: black;">
+          <img height="100px" width="125" id="myimg" style=" margin-bottom:10px;" /><br>
+          <span>Victims Signature</span>
+          <div>
+            <img id="blah" src="#" alt="" style="float:left;margin-top:-130px;" />
+            <span style="margin-right:80%"> SHO Signature</span>
+
+            <input type="file" class="input" id="store1" name="SHO_Signature" onchange="readURL(this);" />
+
+          </div>
+
+
+          <button type="button" class="btn btn-success" id="filed">Submit</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!--FOOTER-->
+
+
+  <div id="call-btn" class="visible-xs">
+    <a class="btn" href="tel:+91 911-888-4444">
+      <span class="glyphicon glyphicon-phone"></span>
+      +91 911-888-4444
+    </a>
+  </div>
+  <div id="xs-deliver" class="text-center visible-xs">*Helpline Number</div>
+
+
+
+
+
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>हेल्पलाइन नंबर:</span><br>
+          महिला हेल्पलाइन: 1090<br>
+          चाइल्ड हेल्पलाइन :1120<br>
+          वरिष्ठ नागरिक हेल्पलाइन: 1091
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>पता:</span><br>
+        <p>मध्य प्रदेश की गृह विभाग सरकार तीसरा तल,
+        वल्लभ भवन-II, मध्य प्रदेश सरकार
+        चौथी मंजिल, मंत्रालय, वल्लभ भवन-I
+         भोपाल, मध्य प्रदेश पिनकोड– 462004
+        फैक्स नंबर – 0755-2441684
+          </p>
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+        <span> हमें मेल करें:</span>
+        <p>cpma.cctns-scrb@mppolice.gov.in</p>
+
+          <span>संपर्क करें:</span>
+          <p>0120-2494564</p>
+          <p>+91 97131xxxxx</p>
+        </section>
+        </div>
+        <div class="text-center"> Copyright © 2020. Government of Madhya Pradesh, India. All Rights Reserved</div>
+        </div>
+  </footer>
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-functions.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCUihnz_5IpZf1ebfn9qKKnQhGVB9fkInQ",
+      authDomain: "sih2020-880e9.firebaseapp.com",
+      databaseURL: "https://sih2020-880e9.firebaseio.com",
+      projectId: "sih2020-880e9",
+      storageBucket: "sih2020-880e9.appspot.com",
+      messagingSenderId: "459850698683",
+      appId: "1:459850698683:web:32179ec1b5277b32c43e9e",
+      measurementId: "G-0WF97D07E4"
+    };
+    firebase.initializeApp(config);
+    firebase.analytics();
+
+    <!--Store sho signature-- >
+
+    var uploader = document.getElementById('upload');
+    var fileButton = document.getElementById("store1");
+
+    var s = firebase.storage();
+
+
+
+    fileButton.addEventListener('change', function(e) {
+
+
+      var file = e.target.files[0];
+
+
+      var storageRef = s.ref('SHO_Signature/' + file.name);
+
+
+      storageRef.put(file);
+
+
+    });
+
+    <!--Store user signature-- >
+
+
+    var uploader1 = document.getElementById('upload1');
+    var fileButton1 = document.getElementById("myimg");
+
+
+
+    fileButton1.addEventListener('change', function(e) {
+
+
+      var file1 = e.target.files[0];
+
+
+      var storageRef = s.ref('UserSignature/' + file1.name);
+
+
+      storageRef.put(file1);
+
+    });
+
+    <!--show sho signature-- >
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+          $('#blah')
+            .attr('src', e.target.result)
+            .width(125)
+            .height(100);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    // make auth and firestore references
+    const auth = firebase.auth();
+    // const db = firebase.firestore();
+
+    var db = firebase.firestore();
+
+
+    var exRef = db.collection('F.I.R');
+    var html = "";
+    var allex = exRef.get().then(snapshot => {
+      snapshot.forEach(doc => {
+        var status = doc.data().Status;
+        if( status === 0)
+        {
+            var Name = CryptoJS.AES.decrypt( doc.data().candidate_Name, "Secret Passphrase").toString(CryptoJS.enc.Utf8);
+          var Mobile = CryptoJS.AES.decrypt( doc.data().Mobile, "Secret Passphrase").toString(CryptoJS.enc.Utf8);
+          var Gender = CryptoJS.AES.decrypt(doc.data().Gender , "Secret Passphrase").toString(CryptoJS.enc.Utf8);
+          var Relation = CryptoJS.AES.decrypt(doc.data().relation , "Secret Passphrase").toString(CryptoJS.enc.Utf8);
+          var Address = CryptoJS.AES.decrypt(doc.data().Address , "Secret Passphrase").toString(CryptoJS.enc.Utf8);
+          // var Email = doc.data().Email;
+          var City =  CryptoJS.AES.decrypt(doc.data().City, "Secret Passphrase").toString(CryptoJS.enc.Utf8);
+          var District =  CryptoJS.AES.decrypt(doc.data().Disttrict, "Secret Passphrase").toString(CryptoJS.enc.Utf8);
+          var aadhar = CryptoJS.AES.decrypt( doc.data().aadhar, "Secret Passphrase").toString(CryptoJS.enc.Utf8);
+          var Complain =CryptoJS.AES.decrypt( doc.data().Complain, "Secret Passphrase").toString(CryptoJS.enc.Utf8);
+          // const Image = doc.data().;
+        // const Image = doc.data().;
+
+
+
+        console.log("inside loop");
+
+
+        html += `<tr id="tr" style="border-bottom:1px solid black"><td id="Name">` + Name + `</td><td id="Mobile">` + Mobile + `</td><td id="Gender">` + Gender + `</td><td id="Relation">` + Relation + `</td><td id="Address">` + Address + `</td>
+      <td id="City">` + City + `</td><td id="District">` + District + `</td><td id="aadhar">` + aadhar + `</td><td id="Complain">` + Complain + `</td><td>
+        <button id="veiwbutton" class="btn btn-primary" data-name="` + Name + `" data-mobile="` + Mobile + `" data-gender="` + Gender + `"" data-relation="` + Relation + `" data-address="` + Address + ` " data-city="` + City + `"" data-district="` +
+          District + `"" data-aadhar="` + aadhar + `"" data-complain="` + Complain + `"onclick="viewmodal(this);" data-toggle="modal" data-target="#myModal"> view </button>
+        </td></tr>`;
+
+        // console.log(html);
+
+        // document.getElementById("Mobile").innerText = Mobile;
+        // document.getElementById("Gender").innerText = Gender;
+        // document.getElementById("Address").innerText = Address;
+        // document.getElementById("Email").innerText = Email;
+        // document.getElementById("City").innerText = City;
+        // document.getElementById("aadhar").innerText = aadhar;
+
+        // document.getElementById("tabledata").innerHTML = html;
+}
+      });
+
+      document.getElementById("tabledata").innerHTML = html;
+
+    });
+
+
+    function viewmodal(value) {
+      console.log("insidde fn");
+      var name = $(value).attr("data-name");
+      var mobile = $(value).attr("data-mobile");
+      var gender = $(value).attr("data-gender");
+      var relation = $(value).attr("data-relation");
+      var address = $(value).attr("data-address");
+      // var email = $(value).attr("data-email");
+      var city = $(value).attr("data-city");
+      var district = $(value).attr("data-district");
+      var aadhar = $(value).attr("data-aadhar");
+      var complain = $(value).attr("data-complain");
+
+      //$("#myModal").modal("show");
+      $("#form-name").val(name);
+      $("#form-mobile").val(mobile);
+      $("#form-gender").val(gender);
+      $("#form-relation").val(relation);
+      $("#form-address").val(address);
+      // $("#form-email").val(email);
+      $("#form-city").val(city);
+      $("#form-district").val(district);
+      $("#form-aadhar").val(aadhar);
+      $("#form-complain").val(complain);
+
+      console.log(name);
+
+      //
+
+    }
+
+
+    const btn = document.getElementById('filed')
+
+    btn.addEventListener('click', () => {
+
+      const rec = document.getElementById('form-mobile').value
+      console.log(rec)
+      // const text = document.getElementById('message').value
+      var name = document.getElementById('form-name').value
+
+
+      fetch("https://allahmeetsram.herokuapp.com/sms", {
+        method: 'post',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          body: 'F.I.R filed successfully' + ' ' + name,
+          from: '+12672143344',
+          to: '+91' + rec
+        })
+      }).then(function(response) {
+        return response.json()
+      }).then(data => console.log(data))
+    });
+
+    // <!--Retrieve User Signature-->
+    var storageRef = firebase.storage();
+
+    var k = storageRef.ref('SHO_Signature/signaturecopy.png');
+    k.getDownloadURL().then(function(url) {
+      // `url` is the download URL for 'images/stars.jpg'
+
+      // This can be downloaded directly:
+      var xhr = new XMLHttpRequest();
+      xhr.responseType = 'blob';
+      xhr.onload = function(event) {
+        var blob = xhr.response;
+      };
+      xhr.open('GET', url);
+      xhr.send();
+
+      // Or inserted into an <img> element:
+      var img = document.getElementById('myimg');
+      img.src = url;
+    }).catch(function(error) {
+
+      // A full list of error codes is available at
+      // https://firebase.google.com/docs/storage/web/handle-errors
+      switch (error.code) {
+        case 'storage/object-not-found':
+          // File doesn't exist
+          break;
+
+        case 'storage/unauthorized':
+          // User doesn't have permission to access the object
+          break;
+
+        case 'storage/canceled':
+          // User canceled the upload
+          break;
+
+        case 'storage/unknown':
+          // Unknown error occurred, inspect the server response
+          break;
+      }
+    });
+
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="js/submit1.js"></script>
+  <script src="js/adminlogout1.js" charset="utf-8"></script>
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- <script src="js/script.js"></script> -->
+
+</body>
+
+</html>
